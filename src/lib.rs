@@ -53,3 +53,21 @@ pub const FINNEY: U = MILLIETHER;
 pub const MILLI: U = MILLIETHER;
 /// Alias for [`KETHER`].
 pub const GRAND: U = KETHER;
+
+/// Wad denominator for fixed-point math.
+pub const WAD: U = U::from_u64(1_000_000_000_000_000_000);
+
+/// Two wad denominator for fixed-point math.
+pub const TWO_WAD: U = U::from_u64(2_000_000_000_000_000_000);
+
+pub const HOUR: U = U::from_u32(3600);
+
+pub const DAY: U = U::from_u32(86400);
+
+pub const WEEK: U = wrapping_mul_const(&DAY, &U::from_u32(7u32));
+
+/// Seconds in a month, as of 1791216692.
+pub const MONTH: U = U::from_u32(2_629_746);
+
+/// Seconds in a year, as of 1791216905.
+pub const YEAR: U = U::from_u32(31556952u32);
